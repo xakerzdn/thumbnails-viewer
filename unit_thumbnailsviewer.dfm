@@ -1,0 +1,55 @@
+object Form_Thumbnails: TForm_Thumbnails
+  Left = 0
+  Top = 0
+  Width = 530
+  Height = 300
+  AutoScroll = True
+  Caption = 'ThumbnailsViewer'
+  Color = clBtnFace
+  Constraints.MinHeight = 300
+  Constraints.MinWidth = 530
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Splitter: TSplitter
+    Left = 150
+    Top = 0
+    Width = 5
+    Height = 261
+    MinSize = 150
+  end
+  object DirectoryListBox: TDirectoryListBox
+    Left = 0
+    Top = 0
+    Width = 150
+    Height = 261
+    Align = alLeft
+    TabOrder = 0
+    OnChange = DirectoryListBoxChange
+    OnKeyPress = DirectoryListBoxKeyPress
+    ExplicitLeft = -1
+  end
+  object ListView: TListView
+    Left = 155
+    Top = 0
+    Width = 359
+    Height = 261
+    Align = alClient
+    Columns = <>
+    DoubleBuffered = True
+    IconOptions.AutoArrange = True
+    ReadOnly = True
+    ParentDoubleBuffered = False
+    ShowColumnHeaders = False
+    TabOrder = 1
+    OnDblClick = ListViewDblClick
+  end
+end
